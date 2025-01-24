@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGESH K - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light Grey Background */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth Scroll */
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2c3e50; /* Deep Blue */
+            color: #ecf0f1; /* Light Gray */
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Profile Picture with Bounce Animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #1abc9c; /* Teal */
+            margin-right: 1.5rem;
+            animation: bounce 2s infinite; /* Bounce Animation */
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header-text h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: #ffffff; /* White */
+        }
+
+        .header-text h2 {
+            font-size: 1.2rem;
+            color: #bdc3c7; /* Mid Gray */
+            margin: 0.5rem 0 0;
+        }
+
+        nav {
+            background-color: #34495e; /* Dark Blue */
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ecf0f1; /* Light Gray */
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1abc9c; /* Teal */
+        }
+
+        /* Active Tab Styles */
+        nav a.active {
+            color: #1abc9c; /* Teal */
+            border-bottom: 3px solid #1abc9c; /* Teal */
+            padding-bottom: 0.5rem;
+        }
+
+        /* Global Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #ecf0f1; /* Light Gray */
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50; /* Deep Blue */
+            text-transform: uppercase;
+            display: inline-block;
+            border-bottom: 3px solid #1abc9c; /* Teal */
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            line-height: 1.8;
+            font-size: 1.2rem;
+            color: #7f8c8d; /* Mid Gray */
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50; /* Deep Blue */
+            color: #ecf0f1; /* Light Gray */
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .header-text h2 {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Education Section */
+        .education-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap onto new lines if necessary */
+            justify-content: space-between; /* Distribute items with space between */
+            gap: 2rem; /* Space between items */
+        }
+
+        .education-item {
+            background-color: #ffffff; /* White */
+            padding: 2rem;
+            border-radius: 5px;
+            color: #2c3e50; /* Deep Blue */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Default to full width */
+            max-width: 300px; /* Limit the width */
+            text-align: center;
+        }
+
+        /* Project Section */
+        .project-item {
+            margin-bottom: 2rem;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .project-item h3 {
+            color: #2c3e50; /* Deep Blue */
+        }
+
+        /* Contact Section */
+        .contact-info {
+            margin-bottom: 1rem;
+            color: #2c3e50; /* Deep Blue */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="./Magesh.jpg" alt="Magesh - Profile Picture" class="profile-picture">
+        <div class="header-text">
+            <h1>MAGESH K</h1>
+            <h2>Assistant Professor</h2>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#Education" class="nav-link">Education</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                I am an Assistant Professor with expertise in Java, MySQL, Python, HTML, CSS, and JavaScript. I am passionate about teaching and inspiring students to excel in technology and innovation.
+            </p>
+            <p>
+                I am also a strong advocate for project-based learning and interdisciplinary projects. I believe in creating a dynamic, collaborative, and engaging environment where students can learn and innovate.
+            </p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML: 90%</li>
+                <li>CSS: 85%</li>
+                <li>JavaScript: 80%</li>
+                <li>Java: 80%</li>
+                <li>MySQL: 90%</li>
+                <li>Python: 70%</li>
+                <li>GIT Knowledge</li>
+            </ul>
+        </section>
+
+        <section id="Education" class="section">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3>Master of Computer Application</h3>
+                    <p>Anna University</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Education</h3>
+                    <p>Tamilnadu Teacher Education University</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Computer Application</h3>
+                    <p>Madras University</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <img src="./project1.png" alt="Project 1">
+                <h3>Project 1 - Secure Lightweight Data Transfer Using Mobile Cloud</h3>
+            </div>
+            <div class="project-item">
+                <img src="./project2.jpg" alt="Project 2">
+                <h3>Project 2 - Fake Profiles Identification in Online Social Networks Using Machine Learning and NLP</h3>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Mobile: 0000000000</p>
+            <p>MailID: magesh</p>
+            <p>Residence: Chennai</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 MAGESH K. All rights reserved.</p>
+    </footer>
+</body>
+</html>
